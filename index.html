@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occipital - Visual Brainfuck Interpreter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Occipital</h1>
+            <p>Visual Brainfuck Interpreter</p>
+        </header>
+
+        <main>
+            <section class="editor-section">
+                <div class="code-container">
+                    <textarea id="code-input" placeholder="Enter Brainfuck code here...">++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.</textarea>
+                    <div id="code-display" class="code-display"></div>
+                </div>
+            </section>
+
+            <section class="controls-section">
+                <button id="btn-run">Run</button>
+                <button id="btn-step">Step</button>
+                <button id="btn-pause" disabled>Pause</button>
+                <button id="btn-reset">Reset</button>
+                <div class="speed-control">
+                    <label for="speed-slider">Speed:</label>
+                    <input type="range" id="speed-slider" min="1" max="100" value="90">
+                </div>
+            </section>
+
+            <section class="visualization-section">
+                <div class="tape-container">
+                    <div id="tape" class="tape">
+                        <!-- Tape cells will be generated here -->
+                    </div>
+                </div>
+                <div class="pointer-info">
+                    Pointer: <span id="pointer-val">0</span> | Value: <span id="cell-val">0</span>
+                </div>
+            </section>
+
+            <section class="io-section">
+                <div class="input-group">
+                    <label for="program-input">Input:</label>
+                    <input type="text" id="program-input" placeholder="Input for , command">
+                </div>
+                <div class="output-group">
+                    <label>Output:</label>
+                    <div id="program-output" class="output-box"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
